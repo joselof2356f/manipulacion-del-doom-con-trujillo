@@ -1,0 +1,289 @@
+body {
+  background: url("NOT\ A\ PHOTO\ 😮_🔥.jpg");
+  color: rgb(255, 56, 56);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.menu-nav {
+  background-color: #141212;
+  padding: 15px 0;
+  height: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.menu-lista {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.menu-lista li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.menu-lista li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 56, 56, 0.3);
+}
+
+h2 {
+  font-size: 75px;
+  text-align: center;
+  margin: 40px 0;
+   font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+    color: rgb(255, 255, 255);
+  font-size: clamp(3rem, 12vw, 12rem);
+  top: 30%;
+  left: 50%;
+  
+  text-align: center;
+  white-space: nowrap;
+  color: #cfcdcd;
+ text-shadow: 
+    0 0 10px #000000,
+    0 0 20px #ffffff,
+    0 0 40px #c7c7c7;
+    
+ 
+}
+
+.carteleraspeli {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  width: 100%;
+  height: 600px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.movie-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.card-front {
+  background: linear-gradient(15deg, #3b3b3b, #000000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-back {
+  background: linear-gradient(15deg, #3b3b3b, #000000);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.movie-image {
+  width: 280px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.movie-title {
+  font-size: 24px;
+  font-family: "oswald", serif;
+  color: aliceblue;
+  margin-top: 15px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.movie-year {
+  font-family: "Creepster", cursive;
+  font-size: 30px;
+  color: rgb(255, 56, 56);
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.movie-info {
+  flex-grow: 1;
+}
+
+.movie-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.movie-details {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.detail-label {
+  color: rgb(206, 50, 50);
+  font-weight: bold;
+}
+
+.rating {
+  background: rgba(255, 56, 56, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 40px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.footer-contenido {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer p {
+  margin: 10px;
+  font-size: 16px;
+}
+
+.footer-enlaces {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-enlaces li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-enlaces li a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .carteleraspeli {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .movie-card {
+    height: 550px;
+  }
+
+  .movie-image {
+    width: 240px;
+    height: 350px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+}
+
+.menu-nav {
+  background-color: #141212;
+  padding: 15px 0;
+  height: 30px;
+}
+
+.menu-lista {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.menu-lista li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.menu-lista li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.melanie {
+  background: linear-gradient(15deg, #3b3b3b, #000000);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  color: #ffffff;
+   }
+   .melanie {
+  background: linear-gradient(15deg, #3b3b3b, #000000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; }
