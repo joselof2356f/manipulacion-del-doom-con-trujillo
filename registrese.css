@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* ← agrega esto */
+}
+
+.registro-cuadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+
+  background: rgba(20, 18, 18, 0.7);
+  padding: 25px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgb(255, 253, 253);
+  width: 350px;
+}
+
+h2 {
+  font-size: 60px;
+ font-family: "Oswald", sans-serif;
+  color: rgb(255, 253, 253);
+  margin-bottom: 10px;
+   text-shadow: 
+    0 0 10px #000000,
+    0 0 20px #ffffff,
+    0 0 40px #c7c7c7;
+    
+}
+
+label {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+  color: white;
+}
+
+input,
+select {
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+  background-color: rgb(27, 27, 27);
+}
+
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.footer-enlaces {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-enlaces li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-enlaces li a:hover {
+  color: #fff;
+}
+ .menu-nav {
+  background-color: #141212;
+  padding: 15px 0;
+  height: 30px;
+  width: 100%;        /* ← agrega */
+  position: relative; /* ← agrega */
+  z-index: 1;         /* ← agrega */
+}
+  
+  .menu-lista {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  .menu-lista li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-lista li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+
+
+  .video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}

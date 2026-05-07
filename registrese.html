@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="registrese.css">
+</head>
+
+<body>
+
+  <!-- Video de fondo -->
+  <video class="video-fondo" autoplay muted loop playsinline>
+    <source src="video 2.mp4" type="video/mp4">
+  </video>
+
+  <nav class="menu-nav">
+    <ul class="menu-lista">
+      <li><a href="pagina.html">Inicio</a></li>
+      <li><a href="canciones.html">Artistas</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="registrese.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <div class="registro-cuadro">
+    <h2>Registrate</h2>
+
+    <label for="Nombre">Nombre:</label>
+    <input type="text" id="Nombre" name="Nombre" placeholder="Nombre aquí" required>
+
+    <label for="lugar">¿De qué país eres?</label>
+    <select id="lugar" name="lugar" required>
+      <option value="seleccionar" selected>Seleccionar</option>
+      <option value="Colombia">Colombia</option>
+      <option value="México">México</option>
+      <option value="Panamá">Panamá</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Venezuela">Venezuela</option>
+      <option value="Bolivia">Bolivia</option>
+      <option value="Chile">Chile</option>
+      <option value="Ecuador">Ecuador</option>
+      <option value="Perú">Perú</option>
+      <option value="Estados Unidos">Estados Unidos</option>
+      <option value="Holanda">Holanda</option>
+      <option value="Francia">Francia</option>
+      <option value="España">España</option>
+      <option value="Afganistán">Afganistán</option>
+      <option value="Japón">Japón</option>
+      <option value="China">China</option>
+      <option value="Italia">Italia</option>
+      <option value="India">India</option>
+      <option value="Canadá">Canadá</option>
+      <option value="Indonesia">Indonesia</option>
+      <option value="Reino Unido">Reino Unido</option>
+      <option value="Alemania">Alemania</option>
+      <option value="Uruguay">Uruguay</option>
+      <option value="Otro">Otro</option>
+    </select>
+
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" name="edad" placeholder="Agrega tu Edad" required>
+
+    <label for="correo">Correo</label>
+    <input type="email" id="correo" name="correo" placeholder="Example@gmail.com" required>
+
+    <label for="contraseña">Contraseña</label>
+    <input type="password" id="contraseña" name="contraseña" placeholder="Agrega tu Contraseña" required>
+
+    <button type="button" id="crearCuenta">Crear Cuenta</button>
+  </div>
+
+  <div id="resultado" class="resultado"></div>
+
+  <footer class="footer">
+    <div class="footer-contenido">
+      <p>© 2025 Web. Todos los derechos reservados.</p>
+      <ul class="footer-enlaces">
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Privacidad</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="registrese.js"></script>
+</body>
+
+</html>
