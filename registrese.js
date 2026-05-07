@@ -1,7 +1,7 @@
-// ── 1. ARREGLO EN MEMORIA (carga lo guardado) ──────────────────
+
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-// ── 2. SELECTORES DEL DOM ─────────────────────────────────────
+
 const btnCrear    = document.getElementById("crearCuenta");
 
 const campoNombre = document.getElementById("Nombre");
@@ -13,11 +13,11 @@ const campoPass   = document.getElementById("contraseña");
 const lista     = document.getElementById("listaUsuarios");
 const resultado = document.getElementById("resultado");
 
-// ── 3. FUNCIÓN: mostrar lista de usuarios ─────────────────────
 
 
 
-// ── 4. EVENTO: Crear cuenta ───────────────────────────────────
+
+
 btnCrear.addEventListener("click", () => {
   const nombre = campoNombre.value.trim();
   const pais   = campoLugar.value;
@@ -31,7 +31,7 @@ btnCrear.addEventListener("click", () => {
     return;
   }
 
-  // Verificar si el correo ya existe
+
   const yaExiste = usuarios.find((u) => u.correo === correo);
   if (yaExiste) {
     resultado.textContent = "⚠️ Ya existe una cuenta con ese correo.";
@@ -39,11 +39,11 @@ btnCrear.addEventListener("click", () => {
     return;
   }
 
-  // Crear objeto y guardarlo
+
   const nuevoUsuario = { nombre, pais, edad, correo, pass };
   usuarios.push(nuevoUsuario);
 
-  // Guardar en localStorage para el login
+  
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
   resultado.textContent = `✅ ¡Cuenta creada para ${nombre}!`;
