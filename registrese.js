@@ -26,7 +26,7 @@ btnCrear.addEventListener("click", () => {
   const pass   = campoPass.value.trim();
 
   if (!nombre || pais === "seleccionar" || !edad || !correo || !pass) {
-    resultado.textContent = "⚠️ Por favor completa todos los campos.";
+    resultado.textContent = " Por favor completa todos los campos.";
     resultado.style.color = "red";
     return;
   }
@@ -34,7 +34,7 @@ btnCrear.addEventListener("click", () => {
 
   const yaExiste = usuarios.find((u) => u.correo === correo);
   if (yaExiste) {
-    resultado.textContent = "⚠️ Ya existe una cuenta con ese correo.";
+    resultado.textContent = " Ya existe una cuenta con ese correo.";
     resultado.style.color = "orange";
     return;
   }
@@ -46,12 +46,11 @@ btnCrear.addEventListener("click", () => {
   
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-  resultado.textContent = `✅ ¡Cuenta creada para ${nombre}!`;
+  resultado.textContent = ` ¡Cuenta creada para ${nombre}!`;
   resultado.style.color = "lightgreen";
 
   mostrarUsuarios(usuarios);
 
-  // Limpiar formulario
   campoNombre.value = "";
   campoLugar.value  = "seleccionar";
   campoEdad.value   = "";

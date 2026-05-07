@@ -7,7 +7,7 @@ btnLogin.addEventListener("click", () => {
   const pass   = document.getElementById("contraseña").value.trim();
 
   if (!correo || !pass) {
-    resultado.textContent = "⚠️ Completa todos los campos.";
+    resultado.textContent = " Completa todos los campos.";
     resultado.style.color = "red";
     return;
   }
@@ -16,7 +16,7 @@ btnLogin.addEventListener("click", () => {
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
   if (usuarios.length === 0) {
-    resultado.textContent = "⚠️ No hay usuarios registrados aún.";
+    resultado.textContent = " No hay usuarios registrados aún.";
     resultado.style.color = "orange";
     return;
   }
@@ -27,7 +27,7 @@ btnLogin.addEventListener("click", () => {
   );
 
   if (encontrado) {
-    resultado.textContent = `✅ Bienvenido, ${encontrado.nombre}!`;
+    resultado.textContent = ` Bienvenido, ${encontrado.nombre}!`;
     resultado.style.color = "lightgreen";
 
  
@@ -35,11 +35,11 @@ btnLogin.addEventListener("click", () => {
 
   
     setTimeout(() => {
-      window.location.href = "manipulacion-del-doom-con-trujillo/canciones.html";
+      window.location.href = "canciones.html";
     }, 1500);
 
   } else {
-    resultado.textContent = "❌ Correo o contraseña incorrectos.";
+    resultado.textContent = " Correo o contraseña incorrectos.";
     resultado.style.color = "red";
   }
 });
