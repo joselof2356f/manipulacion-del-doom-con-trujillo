@@ -102,22 +102,22 @@ h2 {
     0 0 40px #c7c7c7;
   
 }
-/* ⬇ La clave está aquí */
+
 .video-section {
   position: relative;
-  flex: 1; /* ocupa TODO el espacio entre header y footer */
+  flex: 1; 
   overflow: hidden;
 }
 
 .video-section video {
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover; /* cubre sin deformarse */
+  object-fit: cover;
 }
 
 .overlay-content {
   position: relative;
-  z-index: 1; /* encima del video */
+  z-index: 1; 
   color: white;
 }
 
